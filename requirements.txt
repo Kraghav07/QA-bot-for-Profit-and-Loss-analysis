@@ -1,0 +1,13 @@
+streamlit
+langchain-community
+langchain_groq
+groq
+langchain
+faiss-cpu
+pandas
+numpy
+PyPDF2
+PyPDF
+cohere
+python-dotenv
+sentence-transformers
