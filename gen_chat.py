@@ -11,7 +11,6 @@ from langchain.vectorstores import FAISS
 from langchain.embeddings import HuggingFaceEmbeddings
 from langchain.schema import Document
 from langchain.text_splitter import RecursiveCharacterTextSplitter
-from extrac1 import variables,jwt_token
 # Load the JSON file
 with open("knowledge_base_deepseek_distilled.json", "r", encoding="utf-8") as f:
     kb = json.load(f)
@@ -241,22 +240,11 @@ def generate_payloads(api_data,number_of_payloads):
 
     prompt = f"""
     
-    You are an advanced API security penetration tester specializing in OWASP Top 10 API vulnerabilities (2023 edition). Based on the provided API request and response details, analyze potential vulnerabilities and generate realistic, high-confidence payloads only where applicable.
+    You are an advanced API security penetration tester specializing in OWASP Top 10 API vulnerabilities. Based on the provided API request and response details, analyze potential vulnerabilities and generate realistic, high-confidence payloads only where applicable.
 
 ---
-### 📘 OWASP API Vulnerabilities to Consider:
 
-- Broken Object Level Authorization (BOLA/IDOR)
-- Broken Authentication
-- Broken Object Property Level Authorization (BOPLA)
-- Broken Function Level Authorization (BFLA)
-- Server Side Request Forgery (SSRF)
-- Security Misconfiguration
-- Improper Inventory Management
 
-Only select the above vulnerabilities **if they logically apply to the request or response** based on method, endpoint, parameters, and context.
-{variables} this are input variables for sending request to API
-Known valid token for user1: {jwt_token} 
 ---
 ### 🧩 API Request & Response:
 
@@ -278,24 +266,16 @@ Known valid token for user1: {jwt_token}
 
 - Only generate **up to { number_of_payloads } payloads** that are **realistically applicable** to the current API context. If fewer apply, return fewer.
 - Each payload should:
-  - Target a valid vulnerability relevant to the API.
-  - Be formatted as valid JSON (double quotes only).
-  - Include a clear **injection point** (e.g., body → `token`, query → `user_id`, path → `/{id}`, header → `X-API-Key`).
-  - Provide a concise **description** explaining why this input is vulnerable, what it exploits, and the impact.
-  - Avoid assumptions about backend behavior not evident in request/response.
+    - Target a specific OWASP API Top 10  vulnerability that fits the API's structure and purpose.
+    - Be formatted as **valid JSON** (double-quoted keys/values, no JavaScript expressions).
+    - Include a clear **injection point** (e.g., `body → token`, `query → user_id`, `path → /{{id}}`, `header → X-API-Key`).
+    - Contain a strong and realistic example value (especially for credentials or tokens).
+    - Provide a concise **description** of what the payload exploits, how it works, and its potential impact.
+    - Avoid assumptions not supported by the API's request/response (e.g., no guessing fields or endpoints)
 
----
-### 🧪 Output Format (as JSON):
-```json
-{{
-  "vulnerability": "Broken Authentication",
-  "payload": {{ ... }},
-  "injection_point": "body → token",
-  "description": "Uses a forged token to impersonate another user, exploiting weak JWT validation."
-}}
-
-    
-    
+Use strong but bounded values. For example:
+- Password: "Cr4zyP@ssw0rd123!"
+- JWT: "eyJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJhYmNkZUBnbWFpbC5jb20iLCJpYXQiOjE3NDYxNjUzNTQsImV4cCI6MTc0Njc3MDE1NCwicm9sZSI6InVzZXIifQ.g1LpSMY9-lxCmcyyA-xOwp5R8WpxvtLcN5GXASS6CAml8uYtUAOBQq6vyCR5NKHVEfeyvfKULaPsQlvxXtxoM4umnBrDs4v_mdYriIeRHNEl6e3d_EW5OiQrXg1Wz-rK9H6OQ3Do09zo_7f45_11RU_Bl7KLoh2cywaSJKrAn-bhbMhr730lafjTHC8bP5Ywgk1ixedluFLJP60OVxZRDJvN2jdPGYGFtglwnNzYgsbajYFexsZp0ejRFspfAe2d_0eZVq8A0AjMFS6Q0l_m1KZkXl9FZYfaRPZoQwuqu0wxKDnIHI3SBlX-MAzyJs1E8TbBVnG2EG1dOROS69kG4A"
     """
 
                 
