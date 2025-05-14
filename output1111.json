@@ -1,0 +1,278 @@
+[
+    
+    {
+        "name": "SearchMailVerificationToken Back",
+        "method": "GET",
+        "url": "http://localhost:8025/api/v2/search?kind=to&query=mnm@gmail.com",
+        "headers": {
+            "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.66 Safari/537.36",
+            "Content-Type": "application/json",
+            "Accept": "*/*",
+            "Authorization": "Bearer eyJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJhYmNkQGdtYWlsLmNvbSIsImlhdCI6MTc0NDAwMzc1MywiZXhwIjoxNzQ0NjA4NTUzLCJyb2xlIjoidXNlciJ9.CYf65arCYB1CJmqDNmxrwHEd_03JEU5NvUTftMdi1K60SA8gW_x7Bll_wpMFsGNebg_LR0CXF-Sq7CjobHCmNfWrI5DEIy81hps3LhZWmPE1CNWuUAv8MKtkVgSdGxIBXuKx-fG4olGOQ1RCjDPIW2lB4rJWjiT1qm_D8z9UMWG0C0kj4fx2G4NA547TMNKgToer0_kumdQosHRFWQ90pqvf55yiHUbtYwO4MZbbG6_hprPXi5ZPGAKff-6P3yMGtVYsf72NS2ttqrF_7JuLpkH4cTkacAz5Eu6Ey28bUGYr3AOxSLSnq2W0Bw3-YtRM_fFeRfs4KVgvpoxsEYfx6A"
+        },
+        "body": "",
+        "response": {
+            "status_code": 200,
+            "headers": {
+                "Content-Type": "application/json",
+                "Date": "Tue, 22 Apr 2025 08:30:02 GMT",
+                "Transfer-Encoding": "chunked"
+            },
+            "params": {},
+            "body": {
+                "total": 2,
+                "count": 2,
+                "start": 0,
+                "items": [
+                    {
+                        "ID": "72b7vU0alQhxKi6yEhPnth55u-quSDu9Ep_IHcBNVmI=@mailhog.example",
+                        "From": {
+                            "Relays": [],
+                            "Mailbox": "no-reply",
+                            "Domain": "example.com",
+                            "Params": ""
+                        },
+                        "To": [
+                            {
+                                "Relays": [],
+                                "Mailbox": "mnm",
+                                "Domain": "gmail.com",
+                                "Params": ""
+                            }
+                        ],
+                        "Content": {
+                            "Headers": {
+                                "Content-Transfer-Encoding": [
+                                    "7bit"
+                                ],
+                                "Content-Type": [
+                                    "text/html; charset=us-ascii"
+                                ],
+                                "Date": [
+                                    "Tue, 22 Apr 2025 08:28:34 +0000 (UTC)"
+                                ],
+                                "From": [
+                                    "no-reply@example.com"
+                                ],
+                                "MIME-Version": [
+                                    "1.0"
+                                ],
+                                "Message-ID": [
+                                    "<1507410510.11.1745310514922@5a01ade2cecf>"
+                                ],
+                                "Received": [
+                                    "from 5a01ade2cecf by mailhog.example (MailHog)\r\n          id 72b7vU0alQhxKi6yEhPnth55u-quSDu9Ep_IHcBNVmI=@mailhog.example; Tue, 22 Apr 2025 08:28:34 +0000"
+                                ],
+                                "Return-Path": [
+                                    "<no-reply@example.com>"
+                                ],
+                                "Subject": [
+                                    "crAPI OTP"
+                                ],
+                                "To": [
+                                    "mnm@gmail.com"
+                                ]
+                            },
+                            "Body": "",
+                            "Size": 514,
+                            "MIME": null
+                        },
+                        "Created": "2025-04-22T08:28:34.926Z",
+                        "MIME": null,
+                        "Raw": {
+                            "From": "no-reply@example.com",
+                            "To": [
+                                "mnm@gmail.com"
+                            ],
+                            "Data": "Date: Tue, 22 Apr 2025 08:28:34 +0000 (UTC)\r\nFrom: no-reply@example.com\r\nTo: mnm@gmail.com\r\nMessage-ID: <1507410510.11.1745310514922@5a01ade2cecf>\r\nSubject: crAPI OTP\r\nMIME-Version: 1.0\r\nContent-Type: text/html; charset=us-ascii\r\nContent-Transfer-Encoding: 7bit\r\n\r\n<table border='0' cellpadding='0' cellspacing='0' class='btn btn-primary'><tr><td align='center'><table border='0' cellpadding='0' cellspacing='0'><tr><td>Hi,</td><td> </td><td>Your one time generated otp is: 5479</td></tr></table></td></tr></table>",
+                            "Helo": "5a01ade2cecf"
+                        }
+                    },
+                    {
+                        "ID": "DP97_7wt7c0g0X5Pr1gHVxoK98O-kHW3pn2gLnHCz6Q=@mailhog.example",
+                        "From": {
+                            "Relays": [],
+                            "Mailbox": "no-reply",
+                            "Domain": "example.com",
+                            "Params": ""
+                        },
+                        "To": [
+                            {
+                                "Relays": [],
+                                "Mailbox": "mnm",
+                                "Domain": "gmail.com",
+                                "Params": ""
+                            }
+                        ],
+                        "Content": {
+                            "Headers": {
+                                "Content-Transfer-Encoding": [
+                                    "quoted-printable"
+                                ],
+                                "Content-Type": [
+                                    "text/html; charset=UTF-8"
+                                ],
+                                "Date": [
+                                    "Tue, 22 Apr 2025 08:28:28 +0000 (UTC)"
+                                ],
+                                "From": [
+                                    "no-reply@example.com"
+                                ],
+                                "MIME-Version": [
+                                    "1.0"
+                                ],
+                                "Message-ID": [
+                                    "<895844301.10.1745310508645@5a01ade2cecf>"
+                                ],
+                                "Received": [
+                                    "from 5a01ade2cecf by mailhog.example (MailHog)\r\n          id DP97_7wt7c0g0X5Pr1gHVxoK98O-kHW3pn2gLnHCz6Q=@mailhog.example; Tue, 22 Apr 2025 08:28:28 +0000"
+                                ],
+                                "Return-Path": [
+                                    "<no-reply@example.com>"
+                                ],
+                                "Subject": [
+                                    "Welcome to crAPI"
+                                ],
+                                "To": [
+                                    "mnm@gmail.com"
+                                ]
+                            },
+                            "Body": "",
+                            "Size": 1707,
+                            "MIME": null
+                        },
+                        "Created": "2025-04-22T08:28:28.651Z",
+                        "MIME": null,
+                        "Raw": {
+                            "From": "no-reply@example.com",
+                            "To": [
+                                "mnm@gmail.com"
+                            ],
+                            "Data": "Date: Tue, 22 Apr 2025 08:28:28 +0000 (UTC)\r\nFrom: no-reply@example.com\r\nTo: mnm@gmail.com\r\nMessage-ID: <895844301.10.1745310508645@5a01ade2cecf>\r\nSubject: Welcome to crAPI\r\nMIME-Version: 1.0\r\nContent-Type: text/html; charset=UTF-8\r\nContent-Transfer-Encoding: quoted-printable\r\n\r\n<html><body><font face=3D'calibri' style =3D 'font-size:15px; color:#000;'>=\r\nHi pope<font>,<br><font face=3D'calibri'><p style =3D 'font-size:15px; colo=\r\nr:#000;'>We are glad to have you on-board. Your newly purchased vehiche det=\r\nails are provided below. Please add it on your crAPI dashboard.</p><p><font=\r\n face=3D'calibri' style =3D 'font-size:15px;color:#000;'>Your vehicle infor=\r\nmation is <b>VIN: </font><font face=3D'calibri' font color=3D'#0000ff'>4RSO=\r\nE52HXXT191186</font></b> and <b>Pincode: <font face=3D'calibri' font color=\r\n=3D'#0000ff'>7897</font></b></p><p><font face=3D'calibri' style =3D 'font-s=\r\nize:15px;color:#000;'>We're here to help you build a relationship with your=\r\n vehicles.</font></p><p><font face=3D'calibri' style =3D 'font-size:15px;co=\r\nlor:#000;'>Thank You & have a wonderful day !</font></p><font face=3D'calib=\r\nri' style =3D 'font-size:15px;color:#000;'>Warm Regards,<br/><b>crAPI - Tea=\r\nm</b></font><font face=3D'calibri' font color=3D'#0000ff'></font><br/><stro=\r\nng>Email:</strong>&nbsp;<a href=3D'mailto:support@crapi.io'>support@crapi.i=\r\no</a></font><br><font face=3D'calibri'>&nbsp;&nbsp;<br> <em style=3D 'color=\r\n:#000;'>This E-mail and any attachments are private, intended solely for th=\r\ne use of the addressee. If you are not the intended recipient, they have be=\r\nen sent to you in error: any use of information in them is strictly prohibi=\r\nted. </em></body></html>",
+                            "Helo": "5a01ade2cecf"
+                        }
+                    }
+                ]
+            }
+        }
+    },
+    {
+        "name": "Verify email token Back",
+        "method": "POST",
+        "url": "http://localhost:8888/identity/api/v2/user/verify-email-token",
+        "headers": {
+            "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.66 Safari/537.36",
+            "Content-Type": "application/json",
+            "Accept": "*/*",
+            "Authorization": "Bearer eyJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJhYmNkQGdtYWlsLmNvbSIsImlhdCI6MTc0NDAwMzc1MywiZXhwIjoxNzQ0NjA4NTUzLCJyb2xlIjoidXNlciJ9.CYf65arCYB1CJmqDNmxrwHEd_03JEU5NvUTftMdi1K60SA8gW_x7Bll_wpMFsGNebg_LR0CXF-Sq7CjobHCmNfWrI5DEIy81hps3LhZWmPE1CNWuUAv8MKtkVgSdGxIBXuKx-fG4olGOQ1RCjDPIW2lB4rJWjiT1qm_D8z9UMWG0C0kj4fx2G4NA547TMNKgToer0_kumdQosHRFWQ90pqvf55yiHUbtYwO4MZbbG6_hprPXi5ZPGAKff-6P3yMGtVYsf72NS2ttqrF_7JuLpkH4cTkacAz5Eu6Ey28bUGYr3AOxSLSnq2W0Bw3-YtRM_fFeRfs4KVgvpoxsEYfx6A"
+        },
+        "body": {
+            "old_email": "pope@gmail.com",
+            "new_email": "mnm@gmail.com",
+            "token": "qwrnwqkhqewukfb"
+        },
+        "response": {
+            "status_code": 500,
+            "headers": {
+                "Server": "openresty/1.25.3.1",
+                "Date": "Tue, 22 Apr 2025 08:30:04 GMT",
+                "Content-Type": "application/json",
+                "Transfer-Encoding": "chunked",
+                "Connection": "keep-alive",
+                "Vary": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers",
+                "X-Content-Type-Options": "nosniff",
+                "X-XSS-Protection": "0",
+                "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+                "Pragma": "no-cache",
+                "Expires": "0",
+                "Strict-Transport-Security": "max-age=31536000 ; includeSubDomains",
+                "X-Frame-Options": "DENY"
+            },
+            "params": {},
+            "body": {
+                "message": "Sorry, Token did't match",
+                "status": 500
+            }
+        }
+    },
+    {
+        "name": "Login",
+        "method": "POST",
+        "url": "http://localhost:8888/identity/api/auth/login",
+        "headers": {
+            "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.66 Safari/537.36",
+            "Content-Type": "application/json",
+            "Accept": "*/*",
+            "Authorization": "Bearer eyJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJhYmNkQGdtYWlsLmNvbSIsImlhdCI6MTc0NDAwMzc1MywiZXhwIjoxNzQ0NjA4NTUzLCJyb2xlIjoidXNlciJ9.CYf65arCYB1CJmqDNmxrwHEd_03JEU5NvUTftMdi1K60SA8gW_x7Bll_wpMFsGNebg_LR0CXF-Sq7CjobHCmNfWrI5DEIy81hps3LhZWmPE1CNWuUAv8MKtkVgSdGxIBXuKx-fG4olGOQ1RCjDPIW2lB4rJWjiT1qm_D8z9UMWG0C0kj4fx2G4NA547TMNKgToer0_kumdQosHRFWQ90pqvf55yiHUbtYwO4MZbbG6_hprPXi5ZPGAKff-6P3yMGtVYsf72NS2ttqrF_7JuLpkH4cTkacAz5Eu6Ey28bUGYr3AOxSLSnq2W0Bw3-YtRM_fFeRfs4KVgvpoxsEYfx6A"
+        },
+        "body": {
+            "email": "mnm@gmail.com",
+            "password": "Popeoli@9090"
+        },
+        "response": {
+            "status_code": 200,
+            "headers": {
+                "Server": "openresty/1.25.3.1",
+                "Date": "Tue, 22 Apr 2025 08:30:07 GMT",
+                "Content-Type": "application/json",
+                "Transfer-Encoding": "chunked",
+                "Connection": "keep-alive",
+                "Vary": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers",
+                "X-Content-Type-Options": "nosniff",
+                "X-XSS-Protection": "0",
+                "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+                "Pragma": "no-cache",
+                "Expires": "0",
+                "Strict-Transport-Security": "max-age=31536000 ; includeSubDomains",
+                "X-Frame-Options": "DENY"
+            },
+            "params": {},
+            "body": {
+                "token": "eyJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJtbm1AZ21haWwuY29tIiwiaWF0IjoxNzQ1MzEwNjA2LCJleHAiOjE3NDU5MTU0MDYsInJvbGUiOiJ1c2VyIn0.X0gCMvSf5fSiNR3dTLfuHP42FA_sftru5OPiF3vwTXy4kRi74xyP-s-Q8rf_gIoSSyOL6u9A8vFmG-cTJ_R6ps4FgltHyADxwaeXstMAuDG-W6KBrS7c9jHjaNA1VXssFGK4oc0kMUwWXiweEv_LQRf0ZZt60-gvA6f2Q5Pa2ZQrF-9mO8_n2nLdF3ATrfTVX_wPuyoQMf8IYpbVNaErlejhDEHNttPJzNTTwhfWjpxMBGQ8scYrbi6PdFGreTMrsdESWXc7em79fnQVjh89--txbSzWd2D-Ab0wSVYiiy90DNPOnhtn_-pnFJdbPRF-sbgBJ12Qnhww3AhvP9_UwA",
+                "type": "Bearer",
+                "message": "Login successful",
+                "mfaRequired": false
+            }
+        }
+    },
+    {
+        "name": "Get Public Key",
+        "method": "GET",
+        "url": "http://localhost:8888/.well-known/jwks.json",
+        "headers": {
+            "Authorization": "Bearer eyJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJhYmNkQGdtYWlsLmNvbSIsImlhdCI6MTc0NDAwMzc1MywiZXhwIjoxNzQ0NjA4NTUzLCJyb2xlIjoidXNlciJ9.CYf65arCYB1CJmqDNmxrwHEd_03JEU5NvUTftMdi1K60SA8gW_x7Bll_wpMFsGNebg_LR0CXF-Sq7CjobHCmNfWrI5DEIy81hps3LhZWmPE1CNWuUAv8MKtkVgSdGxIBXuKx-fG4olGOQ1RCjDPIW2lB4rJWjiT1qm_D8z9UMWG0C0kj4fx2G4NA547TMNKgToer0_kumdQosHRFWQ90pqvf55yiHUbtYwO4MZbbG6_hprPXi5ZPGAKff-6P3yMGtVYsf72NS2ttqrF_7JuLpkH4cTkacAz5Eu6Ey28bUGYr3AOxSLSnq2W0Bw3-YtRM_fFeRfs4KVgvpoxsEYfx6A"
+        },
+        "body": "",
+        "response": {
+            "status_code": 200,
+            "headers": {
+                "Server": "openresty/1.25.3.1",
+                "Date": "Tue, 22 Apr 2025 08:30:09 GMT",
+                "Content-Type": "text/plain;charset=UTF-8",
+                "Content-Length": "528",
+                "Connection": "keep-alive",
+                "Vary": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers",
+                "X-Content-Type-Options": "nosniff",
+                "X-XSS-Protection": "0",
+                "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+                "Pragma": "no-cache",
+                "Expires": "0",
+                "Strict-Transport-Security": "max-age=31536000 ; includeSubDomains",
+                "X-Frame-Options": "DENY"
+            },
+            "params": {},
+            "body": {
+                "keys": [
+                    {
+                        "kty": "RSA",
+                        "e": "AQAB",
+                        "use": "sig",
+                        "kid": "MKMZkDenUfuDF2byYowDj7tW5Ox6XG4Y1THTEGScRg8",
+                        "alg": "RS256",
+                        "n": "sZKrGYja9S7BkO-waOcupoGY6BQjixJkg1Uitt278NbiCSnBRw5_cmfuWFFFPgRxabBZBJwJAujnQrlgTLXnRRItM9SRO884cEXn-s4Uc8qwk6pev63qb8no6aCVY0dFpthEGtOP-3KIJ2kx2i5HNzm8d7fG3ZswZrttDVbSSTy8UjPTOr4xVw1Yyh_GzGK9i_RYBWHftDsVfKrHcgGn1F_T6W0cgcnh4KFmbyOQ7dUy8Uc6Gu8JHeHJVt2vGcn50EDtUy2YN-UnZPjCSC7vYOfd5teUR_Bf4jg8GN6UnLbr_Et8HUnz9RFBLkPIf0NiY6iRjp9ooSDkml2OGql3ww"
+                    }
+                ]
+            }
+        }
+    }
+]
